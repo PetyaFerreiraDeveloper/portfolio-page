@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Porfolio Page </title>
+    <meta charset="utf-8">
+    <meta name="author" content="Petya Ferreira">
+    <meta name="description" content=" This is a page showing some of the projects Petya Ferreira has worked on.">
+    <link rel="stylesheet" href="style/portfolio.css">
+    <script src="https://kit.fontawesome.com/a38b462df0.js" crossorigin="anonymous"></script>
+    <!-- Once i have font awesome script file, i copy the html link down in the body. -->
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <ul class="nav-list">
+                <li><a href="#welcome-section">About</a></li>
+                <li><a href="#projects">My Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="welcome-section">
+            <div id="frontpage-text">
+                <div id='first-text'>
+                    <h1> Hey! I am Petya. </h1>
+                    <p>Promising software developer</p>
+                </div>
+                <div id='more-content'>
+                    <div id="img-div"></div>
+                    <p>I am a self-taught frontend developer, who is searching for opportunities to get to the next level of programming. </p>
+                    <p>I am using HTML, CSS and Vanilla JS on a daily basis and have built several web applications. Check <a class="for-link" href="#projects"><em>my projects</em></a> page.</p> 
+                    <p>Curious to know more about me? :) <br> <a href="about-me.html" target="_blank" class="for-link">
+                        <em>Click away...</em></a></p>
+                    
+                </div>
+            </div>
+            <a id="show-more">more about me</a>
+            
+            <div class="video-container">
+                <video id ="vid" playsinline autoplay loop muted poster="Images/background-pic.jpeg">
+                    <source src="portfolio-video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div id="project-container">
+                <button class="prev-btn">
+                    <i class="fas fa-chevron-left fa-3x"></i>
+                </button>
+                <div id="tile-container">
+                    <div id="img-wrapper">
+                        <img src="images/petya-face.jpg" alt="About Me image" id="img">
+                        <div id="project-stack">stack: HTML, CSS</div>
+                    </div>
+                    <div id="info-wrapper">
+                        <h3 id="project-title">Personal Page</h3>
+                        <p id="project-description">A page describing my professional and personal achievements in chronological order. It also contains information about my interests and the goals which drive my personal and professional development.</p>
+                    </div>
+                   
+                    
+                    
+                </div>
+                <button class="next-btn">
+                    <i class="fas fa-chevron-right fa-3x"></i>
+                </button>
+            </div>
+        </section>
+    </main>
+    <footer id="contact-links">
+        <div class="contact-header">
+            <h3>Lets work together!</h3>
+            <p><em>Find more about me in the links below:</em></p>
+            <br><br><br>
+        </div>
+        <div id="profile-link">
+            <a class="link" id="youtube" href="https://www.youtube.com/channel/UCt1QTbHaFvCWsAsR34jLzrQ" target="_blank"> 
+                    Youtube</a>
+            <a class="link" id="github" href="https://github.com/PetyaFerreiraDeveloper?tab=projects" target="_blank"> 
+                    GitHub</a>
+            <a class="link" id="linkedin" href="https://www.linkedin.com/in/petyanaydenova/" target="_blank"> 
+                    LinkedIn</a>
+        </div>
+    </footer>
+    <script src='index.js'></script>
+</body>
+</html>

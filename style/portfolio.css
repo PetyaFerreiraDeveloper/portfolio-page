@@ -1,0 +1,240 @@
+main {
+    margin-top: 50px;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    width: 100%;
+    font-size: 1.8rem;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+/* HEADER */
+#navbar {
+    width: 100%;
+    border: black;
+    border-style: solid;
+    background-color: white;
+    left: 0;
+    top: 0;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+    z-index: 5;
+}
+
+.nav-list {
+    margin-right: 10px;
+    margin-top: 5px;
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-list li {
+    padding: 0 10px;
+}
+
+a {
+    text-decoration: none;
+    color:rgb(99, 99, 99)
+}
+
+/* ABOUT */
+#welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+video {
+    position: relative;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.video-container {
+    position: absolute;
+    z-index: -1;
+}
+
+#frontpage-text {
+    position: relative;
+    color: white;
+    margin-top: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    max-width: 500px;
+    max-height: 160px;
+    overflow: hidden;
+}
+
+#frontpage-text.open {
+    max-height: none;
+    max-width: 600px;
+    background-color: white;
+    color: rgb(99, 99, 99);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+#first-text.hidden {
+    display: none;
+}
+
+a.for-link {
+    color: rgb(0, 132, 255);
+}
+
+#img-div{
+    float: left;
+    background-image: url(../images/petya-face.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 -5px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: solid 5px white;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.30), 0 6px 20px rgba(0, 0, 0, 0.90);
+    margin: 10px;
+}
+
+#show-more {
+    display: block;
+    background: rgb(99, 99, 99);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 
+    'Trebuchet MS', sans-serif;
+    padding: 10px;
+    width: 140px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* PROJECTS */
+h2 {
+    color:rgb(99, 99, 99);
+}
+
+h2:after {
+    margin: 10px auto 0 auto;
+    display: block;
+    content: ' ';
+    background: rgb(16, 134, 55);
+    height: 0.5rem;
+    width: 10rem;
+}
+
+#project-container {
+    width: 90%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    margin: auto;
+}
+
+.prev-btn,
+.next-btn {
+    background: transparent;
+    border: none;
+    padding: 1em;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    cursor: pointer;
+    background: rgb(201, 247, 187);
+}
+
+.fas.fa-chevron-left.fa-3x,
+.fas.fa-chevron-right.fa-3x {
+    color: rgb(16, 134, 55);
+}
+
+/* PROJECT TILES */
+h3 {
+    margin: 0;
+    padding-top: 0.1em;
+}
+#img {
+    object-fit: cover;
+    width: 200px;
+    border-radius: 10px;
+    
+}
+#img-wrapper {
+    float: left;
+    padding: 1em;
+    border: black solid 1px;
+    
+}
+#project-stack {
+    font-size: 18px; 
+}
+#info-wrapper {
+    padding: 1em;
+    border: black solid 1px;
+    
+}
+
+#tile-container {
+    border: black solid 1px;
+    margin: auto;
+    padding: 0.1em;
+    overflow: hidden;
+    background: rgb(234, 234, 234);
+}
+
+/* FOOTER */
+#profile-link {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: solid;
+    border-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: red;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+#contact-links {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    padding: 0 15px;
+    color:rgb(174, 174, 174);
+}
+
+@media only screen and (max-width:600px) {
+    #profile-link {
+        background-color: lightblue;
+    }
+    /* #img-wrapper {
+        float: right;
+    } */
+}
