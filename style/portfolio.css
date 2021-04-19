@@ -27,21 +27,25 @@ body {
 }
 
 .nav-list {
-    margin-right: 10px;
-    margin-top: 5px;
     display: flex;
+    margin-right: 10px;
+    margin-top: 0; 
     list-style-type: none;
 }
 
 .nav-list li {
-    padding: 0 10px;
+    padding: 5px 10px 0 10px;
+    height: 45px;
 }
 
-a {
+.nav-list a {
     text-decoration: none;
     color:rgb(99, 99, 99)
 }
 
+.nav-list li:hover {
+    background-color: rgb(234, 234, 234);
+}
 /* ABOUT */
 #welcome-section {
     height: 100vh;
@@ -167,31 +171,6 @@ h2:after {
 }
 
 /* PROJECT TILES */
-h3 {
-    margin: 0;
-    padding-top: 0.1em;
-}
-#img {
-    object-fit: cover;
-    width: 200px;
-    border-radius: 10px;
-    
-}
-#img-wrapper {
-    float: left;
-    padding: 1em;
-    border: black solid 1px;
-    
-}
-#project-stack {
-    font-size: 18px; 
-}
-#info-wrapper {
-    padding: 1em;
-    border: black solid 1px;
-    
-}
-
 #tile-container {
     border: black solid 1px;
     margin: auto;
@@ -199,23 +178,28 @@ h3 {
     overflow: hidden;
     background: rgb(234, 234, 234);
 }
-
-/* FOOTER */
-#profile-link {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    border: solid;
-    border-color: black;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: red;
-    position: fixed;
-    left: 0;
-    bottom: 0;
+h3 {
+    margin: 0;
+    padding-top: 0.1em;
+}
+#img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+#img-wrapper {
+    float: left;
+    padding: 1em;
+}
+#project-stack {
+    font-size: 18px; 
+}
+#info-wrapper {
+    padding: 1em;
 }
 
+/* FOOTER */
 #contact-links {
     width: 100%;
     height: 100vh;
@@ -224,17 +208,36 @@ h3 {
     justify-content: center;
     align-items: center;
 }
+#profile-link {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    border: solid;
+    border-color: black;
+    background-color: white;
+    color:rgb(99, 99, 99);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    font-size: 18px;
+}
 
 .link {
-    padding: 0 15px;
-    color:rgb(174, 174, 174);
+    padding: 18px 15px;
+    color:rgb(99, 99, 99);
+    text-decoration: none;
+}
+.link:hover {
+    background-color: rgb(234, 234, 234);
+}
+#copyrights {
+    margin-left: 10px;
 }
 
 @media only screen and (max-width:600px) {
-    #profile-link {
-        background-color: lightblue;
+    #img-wrapper {
+        float: none;
     }
-    /* #img-wrapper {
-        float: right;
-    } */
 }
