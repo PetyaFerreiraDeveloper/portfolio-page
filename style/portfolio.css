@@ -152,6 +152,10 @@ h2:after {
     margin: auto;
 }
 
+button {
+    outline: 0 !important;
+}
+
 .prev-btn,
 .next-btn {
     background: transparent;
