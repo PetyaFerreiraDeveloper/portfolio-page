@@ -11,6 +11,13 @@ body {
     margin-top: 0;
 }
 
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
 /* HEADER */
 #navbar {
     width: 100%;
@@ -181,6 +188,8 @@ button {
     padding: 0.1em;
     overflow: hidden;
     background: rgb(234, 234, 234);
+    cursor: pointer;
+    transition: width 1s, transform 1s;
 }
 h3 {
     margin: 0;
@@ -203,6 +212,44 @@ h3 {
     padding: 1em;
 }
 
+/* OVERLAY WHEN A TILE IS CLICKED */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(100, 100, 100, 0.5);
+    display: grid;
+    place-items: center;
+    visibility: hidden;
+}
+.open-overlay {
+    visibility: visible;
+}
+.overlay-links {
+    background: white;
+    width: 75vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.overlay-links a {
+    padding: 1rem;
+}
+.close-overlay {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: red;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    /* transition: all 0.3s linear; */
+}
 /* FOOTER */
 #contact-links {
     width: 100%;

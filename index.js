@@ -1,3 +1,4 @@
+
 // ********** PROJECTS DATA ********** //
 // later implement with JSON
 const projects = [
@@ -30,6 +31,21 @@ const projects = [
         img: './images/our-baby-logo.png'
     },
 ];
+
+
+// add the overlay when the tile is clicked
+// grab the tile, the overlay and the close button
+let tileContainer = document.getElementById('tile-container');
+let overlay = document.getElementById('overlay');
+let closeOverlay = document.querySelector('.close-overlay');
+tileContainer.addEventListener('click', function() {
+    overlay.classList.add('open-overlay');
+});
+
+closeOverlay.addEventListener('click', function() {
+    overlay.classList.remove('open-overlay');
+});
+
 
 // ********** OPEN AND CLOSE THE ABOUT ME MORE SECTION ********** //
 // navigate between projects by clicking the arrows
