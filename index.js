@@ -7,28 +7,40 @@ const projects = [
         title: 'About Me',
         description: 'A page describing my professional and personal achievements in chronological order. It also contains information about my interests and the goals which drive my personal and professional development.',
         stack: 'stack: HTML, CSS',
-        img: './images/petya-face.jpg'
+        img: './images/petya-face.jpg',
+        webPage: 'https://www.youtube.com/',
+        github: 'https://github.com',
+        detail: 'https://github.com'
     },
     {
         id: 2,
         title: 'Portfolio Page',
         description: 'This is the page which keeps track of my projects and development as a programmer.',
         stack: 'stack: HTML, CSS, JS',
-        img: './images/portfolio-page.png'
+        img: './images/portfolio-page.png',
+        webPage: 'https://translate.google.com/',
+        github: 'https://www.freecodecamp.org/',
+        detail: 'https://github.com'
     },
     {
         id: 3,
         title: 'Project 3',
         description: '"To dare is to lose ones footing momentarily. Not to dare is to lose oneself."',
         stack: 'stack: HTML, CSS',
-        img: './images/logo.jpeg'
+        img: './images/logo.jpeg',
+        webPage: 'https://translate.google.com/',
+        github: 'https://www.freecodecamp.org/',
+        detail: 'https://github.com'
     },
     {
         id: 4,
         title: 'Project 4',
         description: '"If at first the idea is not absurd, then there is no hope for it."',
         stack: 'stack: HTML, CSS',
-        img: './images/our-baby-logo.png'
+        img: './images/our-baby-logo.png',
+        webPage: 'https://translate.google.com/',
+        github: 'https://www.freecodecamp.org/',
+        detail: 'https://github.com'
     },
 ];
 
@@ -38,6 +50,7 @@ const projects = [
 let tileContainer = document.getElementById('tile-container');
 let overlay = document.getElementById('overlay');
 let closeOverlay = document.querySelector('.close-overlay');
+
 tileContainer.addEventListener('click', function() {
     overlay.classList.add('open-overlay');
 });
@@ -46,12 +59,11 @@ closeOverlay.addEventListener('click', function() {
     overlay.classList.remove('open-overlay');
 });
 
-
-// ********** OPEN AND CLOSE THE ABOUT ME MORE SECTION ********** //
 // navigate between projects by clicking the arrows
 // we need to add an event listener to the project-container, 
 // when an arrow is clicked, identify which one is clicked and 
 // show the information from either the next or previous element in the projects array
+// we also change the links in the overlay with the same function
 
 // grab the project-container and each of the items we want changed on click
 let projectContainer = document.getElementById('project-container');
@@ -59,6 +71,8 @@ let title = document.getElementById('project-title');
 let description = document.getElementById('project-description');
 let stack = document.getElementById('project-stack');
 let img = document.getElementById('img');
+let webPage = document.getElementById('web-page');
+let github = document.getElementById('github');
 
 // create a function which will show info about the project at a certain index
 // We will call this function when an arrow is clicked
@@ -69,6 +83,8 @@ function showProject(index) {
     description.textContent = project.description;
     stack.textContent = project.stack;
     img.src = project.img;
+    webPage.href = project.webPage;
+    github.href = project.github;
 }
 
 let currentItem = 0; // create a variable to follow where in the array we are(the index of the element)
@@ -93,8 +109,6 @@ projectContainer.addEventListener('click', (e) => {
     }
     showProject(currentItem);
 })
-
-
 
 
 // ********** OPEN AND CLOSE THE ABOUT ME MORE SECTION ********** //

@@ -184,6 +184,8 @@ button {
 /* PROJECT TILES */
 #tile-container {
     border: black solid 1px;
+    width: 75vw;
+    height: 40vh;
     margin: auto;
     padding: 0.1em;
     overflow: hidden;
@@ -198,7 +200,7 @@ h3 {
 #img {
     object-fit: cover;
     width: 200px;
-    height: 200px;
+    height: 250px;
     border-radius: 10px;
 }
 #img-wrapper {
@@ -230,7 +232,7 @@ h3 {
 .overlay-links {
     background: white;
     width: 75vw;
-    height: 70vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -290,5 +292,9 @@ h3 {
 @media only screen and (max-width:600px) {
     #img-wrapper {
         float: none;
+    }
+    #tile-container {
+        width: auto;
+        height: auto;
     }
 }
