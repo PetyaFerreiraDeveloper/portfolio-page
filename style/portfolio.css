@@ -269,6 +269,9 @@ h3 {
     cursor: pointer;
     /* transition: all 0.3s linear; */
 }
+.close-overlay:hover {
+    transform: scale(1.3);
+}
 /* FOOTER */
 #contact-links {
     width: 100%;
