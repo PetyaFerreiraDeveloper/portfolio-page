@@ -1,8 +1,8 @@
 main {
-    margin-top: 50px;
+    /* margin-top: 50px; */
     padding: 0;
+    margin: 0;
 }
-
 body {
     font-family: var(--ff-gothic);
     letter-spacing: var(--spacing);
@@ -12,11 +12,9 @@ body {
     margin-left: 0;
     margin-top: 0;
 }
-
 ul {
     list-style-type: none;
 }
-
 a {
     text-decoration: none;
 }
@@ -28,7 +26,6 @@ a {
     'Trebuchet MS', sans-serif;
     --spacing: 2px;
 }
-
 /* HEADER */
 #navbar {
     width: 100%;
@@ -43,37 +40,22 @@ a {
     height: 50px;
     z-index: 5;
 }
-
 .nav-list {
     display: flex;
     margin-right: 10px;
     margin-top: 0; 
-    list-style-type: none;
 }
-
 .nav-list li {
     padding: 5px 10px 0 10px;
     height: 45px;
 }
-
 .nav-list a {
-    text-decoration: none;
     color:rgb(99, 99, 99)
 }
-
 .nav-list li:hover {
     background-color: rgb(234, 234, 234);
 }
 /* ABOUT */
-#welcome-section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    
-}
-
 video {
     position: relative;
     top: 0;
@@ -82,22 +64,24 @@ video {
     width: 100vw;
     height: 100vh;
 }
-
 .video-container {
     position: absolute;
     z-index: -1;
 }
-
+#welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 #frontpage-text {
-    position: relative;
-    color: white;
-    margin-top: 30px;
+    margin-top: 100px;
     font-weight: bold;
+    color: white;
     max-width: 500px;
     max-height: 160px;
     overflow: hidden;
 }
-
 #frontpage-text.open {
     max-height: none;
     max-width: 600px;
@@ -112,11 +96,9 @@ video {
 #first-text.hidden {
     display: none;
 }
-
 a.for-link {
     color: rgb(0, 132, 255);
 }
-
 #img-div{
     float: left;
     background-image: url(../images/petya-face.jpg);
@@ -130,7 +112,6 @@ a.for-link {
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.30), 0 6px 20px rgba(0, 0, 0, 0.90);
     margin: 10px;
 }
-
 #show-more {
     display: block;
     background: rgb(99, 99, 99);
@@ -150,7 +131,6 @@ a.for-link {
 h2 {
     color:rgb(99, 99, 99);
 }
-
 h2:after {
     margin: 10px auto 0 auto;
     display: block;
@@ -159,7 +139,6 @@ h2:after {
     height: 0.5rem;
     width: 10rem;
 }
-
 #project-container {
     width: 90%;
     display: flex;
@@ -169,29 +148,24 @@ h2:after {
     padding: 1em;
     margin: auto;
 }
-
 button {
     outline: 0 !important;
 }
-
 .prev-btn,
 .next-btn {
     background: transparent;
     border: none;
     padding: 1em;
 }
-
 .prev-btn:hover,
 .next-btn:hover {
     cursor: pointer;
     background: rgb(201, 247, 187);
 }
-
 .fas.fa-chevron-left.fa-3x,
 .fas.fa-chevron-right.fa-3x {
     color: rgb(16, 134, 55);
 }
-
 /* PROJECT TILES */
 #tile-container {
     border: black solid 1px;
