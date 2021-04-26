@@ -8,8 +8,8 @@ const projects = [
         description: 'A page describing my professional and personal achievements in chronological order. It also contains information about my interests and the goals which drive my personal and professional development.',
         stack: 'stack: HTML, CSS',
         img: './images/petya-face.jpg',
-        webPage: 'https://www.youtube.com/',
-        github: 'https://www.freecodecamp.org/',
+        webPage: 'https://petyaferreiradeveloper.github.io/PetyaPage/',
+        github: 'https://github.com/PetyaFerreiraDeveloper/PetyaPage.git',
         detail: 'https://dexter-morgan.webflow.io/'
     },
     {
