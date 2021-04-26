@@ -9,8 +9,8 @@ const projects = [
         stack: 'stack: HTML, CSS',
         img: './images/petya-face.jpg',
         webPage: 'https://www.youtube.com/',
-        github: 'https://github.com',
-        detail: 'https://github.com'
+        github: 'https://www.freecodecamp.org/',
+        detail: 'https://dexter-morgan.webflow.io/'
     },
     {
         id: 2,
@@ -73,6 +73,7 @@ let stack = document.getElementById('project-stack');
 let img = document.getElementById('img');
 let webPage = document.getElementById('web-page');
 let github = document.getElementById('github');
+let detail = document.getElementById('detail');
 
 // create a function which will show info about the project at a certain index
 // We will call this function when an arrow is clicked
@@ -85,6 +86,7 @@ function showProject(index) {
     img.src = project.img;
     webPage.href = project.webPage;
     github.href = project.github;
+    detail.href = project.detail;
 }
 
 let currentItem = 0; // create a variable to follow where in the array we are(the index of the element)

@@ -4,6 +4,8 @@ main {
 }
 
 body {
+    font-family: var(--ff-gothic);
+    letter-spacing: var(--spacing);
     text-align: center;
     width: 100%;
     font-size: 1.8rem;
@@ -18,6 +20,15 @@ ul {
 a {
     text-decoration: none;
 }
+/* VARIABLES */
+:root {
+    --ff-gothic: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --ff-verdana: Verdana, Geneva, Tahoma, sans-serif;
+    --ff-gill: 'Gill Sans', 'Gill Sans MT', Calibri, 
+    'Trebuchet MS', sans-serif;
+    --spacing: 2px;
+}
+
 /* HEADER */
 #navbar {
     width: 100%;
@@ -60,6 +71,7 @@ a {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    
 }
 
 video {
@@ -81,7 +93,6 @@ video {
     color: white;
     margin-top: 30px;
     font-weight: bold;
-    letter-spacing: 2px;
     max-width: 500px;
     max-height: 160px;
     overflow: hidden;
@@ -221,7 +232,7 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(100, 100, 100, 0.5);
+    background: rgba(100, 100, 100, 0.8);
     display: grid;
     place-items: center;
     visibility: hidden;
@@ -231,6 +242,7 @@ h3 {
 }
 .overlay-links {
     background: white;
+    color: rgb(99, 99, 99);
     width: 75vw;
     height: 50vh;
     display: flex;
@@ -240,6 +252,11 @@ h3 {
 }
 .overlay-links a {
     padding: 1rem;
+    color: rgb(99, 99, 99);
+    
+}
+.overlay-links a:hover {
+    background-color: rgb(234, 234, 234);
 }
 .close-overlay {
     position: absolute;
