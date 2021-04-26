@@ -18,8 +18,8 @@ const projects = [
         description: 'This is the page which keeps track of my projects and development as a programmer.',
         stack: 'stack: HTML, CSS, JS',
         img: './images/portfolio-page.png',
-        webPage: 'https://translate.google.com/',
-        github: 'https://www.freecodecamp.org/',
+        webPage: 'https://petyaferreiradeveloper.github.io/portfolio-page/',
+        github: 'https://github.com/PetyaFerreiraDeveloper/portfolio-page.git',
         detail: 'https://github.com'
     },
     {
