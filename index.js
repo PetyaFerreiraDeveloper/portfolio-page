@@ -100,6 +100,7 @@ projectContainer.addEventListener('click', (e) => {
     let target = e.target;
     if (target.classList == 'next-btn' || target.classList == 'fas fa-chevron-right fa-3x') {
         currentItem++;
+        console.log(currentItem);
         if (currentItem > projects.length - 1) {
             currentItem = 0;
         }
