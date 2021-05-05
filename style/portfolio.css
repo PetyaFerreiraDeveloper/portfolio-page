@@ -126,6 +126,9 @@ a.for-link {
     margin-top: 20px;
 }
 /* PROJECTS */
+#projects {
+    padding-top: 40px;
+}
 h2 {
     color:rgb(99, 99, 99);
 }
@@ -175,6 +178,13 @@ button {
     background: rgb(234, 234, 234);
     cursor: pointer;
     transition: width 1s, transform 1s;
+    border-radius: 10px;
+}
+#tile-container:hover,
+#tile-container:active {
+    transform: scale(1.1);
+    background: rgb(99, 99, 99);
+    color: white;
 }
 h3 {
     margin: 0;
@@ -213,7 +223,7 @@ h3 {
     visibility: visible;
 }
 .overlay-links {
-    background: white;
+    background: linear-gradient(white, green, red);
     color: rgb(99, 99, 99);
     width: 75vw;
     height: 50vh;
@@ -221,14 +231,16 @@ h3 {
     flex-direction: column;
     justify-content: center;
     position: relative;
+    border-radius: 10px;
 }
 .overlay-links a {
     padding: 1rem;
-    color: rgb(99, 99, 99);
+    color: white;
     
 }
 .overlay-links a:hover {
-    background-color: rgb(234, 234, 234);
+    background-color: rgb(99, 99, 99);
+    border-radius: 5px;
 }
 .close-overlay {
     position: absolute;
