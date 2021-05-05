@@ -25,22 +25,22 @@ const projects = [
     {
         id: 3,
         title: 'Project 3',
-        description: '"To dare is to lose ones footing momentarily. Not to dare is to lose oneself."',
+        description: '"To dare is to lose ones footing momentarily. Not to dare is to lose oneself." by Søren Kierkegaard',
         stack: 'stack: HTML, CSS',
         img: './images/logo.jpeg',
-        webPage: 'https://translate.google.com/',
-        github: 'https://www.freecodecamp.org/',
-        detail: '../project3/project3-detail/index.html'
+        webPage: 'work-in-progress.html',
+        github: 'work-in-progress.html',
+        detail: 'work-in-progress.html'
     },
     {
         id: 4,
         title: 'Project 4',
-        description: '"If at first the idea is not absurd, then there is no hope for it."',
+        description: '"If at first the idea is not absurd, then there is no hope for it." by Albert Einstein',
         stack: 'stack: HTML, CSS',
         img: './images/our-baby-logo.png',
-        webPage: 'https://translate.google.com/',
-        github: 'https://www.freecodecamp.org/',
-        detail: '../project4/project4-detail/index.html'
+        webPage: 'work-in-progress.html',
+        github: 'work-in-progress.html',
+        detail: 'work-in-progress.html'
     },
 ];
 
