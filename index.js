@@ -10,7 +10,7 @@ const projects = [
         img: './images/petya-face.jpg',
         webPage: 'https://petyaferreiradeveloper.github.io/PetyaPage/',
         github: 'https://github.com/PetyaFerreiraDeveloper/PetyaPage.git',
-        detail: 'https://dexter-morgan.webflow.io/'
+        detail: '../about-me/about-me-detail/index.html'
     },
     {
         id: 2,
@@ -20,7 +20,7 @@ const projects = [
         img: './images/portfolio-page.png',
         webPage: 'https://petyaferreiradeveloper.github.io/portfolio-page/',
         github: 'https://github.com/PetyaFerreiraDeveloper/portfolio-page.git',
-        detail: 'https://github.com'
+        detail: './portfolio-detail/index.html'
     },
     {
         id: 3,
@@ -30,7 +30,7 @@ const projects = [
         img: './images/logo.jpeg',
         webPage: 'https://translate.google.com/',
         github: 'https://www.freecodecamp.org/',
-        detail: 'https://github.com'
+        detail: '../project3/project3-detail/index.html'
     },
     {
         id: 4,
@@ -40,7 +40,7 @@ const projects = [
         img: './images/our-baby-logo.png',
         webPage: 'https://translate.google.com/',
         github: 'https://www.freecodecamp.org/',
-        detail: 'https://github.com'
+        detail: '../project4/project4-detail/index.html'
     },
 ];
 

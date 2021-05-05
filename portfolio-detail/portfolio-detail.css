@@ -1,0 +1,17 @@
+.parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.image {
+    padding: 20px;
+    margin: 20px;
+}
+
+.fas.fa-tools.fa-10x {
+    color: red;
+}
