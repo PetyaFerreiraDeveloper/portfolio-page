@@ -10,7 +10,7 @@ const projects = [
         img: './images/petya-face.jpg',
         webPage: 'https://petyaferreiradeveloper.github.io/PetyaPage/',
         github: 'https://github.com/PetyaFerreiraDeveloper/PetyaPage.git',
-        detail: '../about-me/about-me-detail/index.html'
+        detail: 'https://petyaferreiradeveloper.github.io/PetyaPage/about-me-detail/index.html'
     },
     {
         id: 2,
