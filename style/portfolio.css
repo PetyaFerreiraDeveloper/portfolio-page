@@ -221,7 +221,7 @@ button {
 
 #tile-container:hover,
 #tile-container:active {
-    transform: scale(1.1);
+    transform: scale(0.9);
     background: rgb(99, 99, 99);
     color: white;
 }
