@@ -24,12 +24,12 @@ const projects = [
     },
     {
         id: 3,
-        title: 'Project 3',
-        description: '"To dare is to lose ones footing momentarily. Not to dare is to lose oneself." by Søren Kierkegaard',
-        stack: 'stack: HTML, CSS',
+        title: 'Barista Coffee Cup Challenge',
+        description: '"This is a responsive website I built for a developer challenge from twentyfour.dk',
+        stack: 'stack: HTML, CSS, JS',
         img: './images/logo.jpeg',
-        webPage: 'work-in-progress.html',
-        github: 'work-in-progress.html',
+        webPage: 'https://petyaferreiradeveloper.github.io/brown-rabbit-github/',
+        github: 'https://github.com/PetyaFerreiraDeveloper/brown-rabbit-github',
         detail: 'work-in-progress.html'
     },
     {
