@@ -114,7 +114,7 @@ projectContainer.addEventListener('click', (e) => {
 })
 
 
-// ********** OPEN AND CLOSE THE ABOUT ME MORE SECTION ********** //
+// ********** OPEN AND CLOSE THE MORE ABOUT ME SECTION ********** //
 
 // lets grab the button and the div box, which we will be opening
 let buttonShow = document.getElementById('show-more');
@@ -142,3 +142,28 @@ buttonShow.onclick = () => {
 }
 // when the collapse button is clicked the box will change size and 
 // the show-more button will reappear
+
+// ********** BLURRING OF BACKGROUND VIDEO ********** //
+
+const loadStatus = document.querySelector('.loading-status');
+const video = document.querySelector('.video-container');
+
+let load = 0;
+let interval = setInterval(blurring, 30);
+
+function blurring() {
+    load++;
+    if (load > 99) {
+        clearInterval(interval);
+    }
+
+    loadStatus.innerText = `${load}%`;
+    loadStatus.style.opacity = scale(load, 0, 100, 1, 0);
+    video.style.filter = `blur(${scale(load, 0, 100, 30, 0)}px)`;
+
+};
+
+// https://stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers
+function scale(number, inMin, inMax, outMin, outMax) {
+    return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+};
