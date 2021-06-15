@@ -118,30 +118,21 @@ projectContainer.addEventListener('click', (e) => {
 
 // lets grab the button and the div box, which we will be opening
 let buttonShow = document.getElementById('show-more');
-let moreContent = document.getElementById('frontpage-text');
+let moreContent = document.getElementById('more-content');
 let buttonCollapse = document.getElementById('collapse');
 let firstText = document.getElementById('first-text');
 
-// when the show-more button is clicked, the div box should open, and a new button colled
-// collapse should be placed under the new information
+// when the show-more button is clicked, the div box should open, and a new
+// show-less button should be shown
 
-buttonShow.onclick = () => {
-    if(moreContent.className == '') {
-        // expand the box
-        moreContent.className = 'open';
-        // change the text on buttonShow
-        buttonShow.innerHTML = 'Collapse';
-        // remove the first-text
-        firstText.className = 'hidden';
-    } else {
-        // collapse the box
-        moreContent.className = '';
+buttonShow.addEventListener('click', function() {
+    moreContent.classList.toggle('open');
+    buttonShow.innerHTML = 'show less';
+    firstText.classList.toggle('hidden');
+    if(!firstText.classList.contains('hidden')) {
         buttonShow.innerHTML = 'more about me';
-        firstText.className = '';
     }
-}
-// when the collapse button is clicked the box will change size and 
-// the show-more button will reappear
+})
 
 // ********** BLURRING OF BACKGROUND VIDEO ********** //
 
