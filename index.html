@@ -11,8 +11,18 @@
 </head>
 <body>
     <header>
-        <nav id="navbar">
+        <nav id="navbar"> 
             <ul class="nav-list">
+                <li><a href="#welcome-section">About</a></li>
+                <li><a href="#projects">My Projects</a></li>
+                <li><a href="#contact-header">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <i class="fas fa-bars fa-2x" id="hamburger-bars"></i>
+        </div>
+        <nav class="mobile-nav">
+            <ul class="mobile-nav-list">
                 <li><a href="#welcome-section">About</a></li>
                 <li><a href="#projects">My Projects</a></li>
                 <li><a href="#contact-header">Contact</a></li>
@@ -20,20 +30,23 @@
         </nav>
     </header>
     <main>
+        <div class="overlay" id="overlay"></div>
         <section id="welcome-section">
             <div id='first-text'>
                 <h1> Hey! I am Petya. </h1>
                 <p>Promising software developer</p>
             </div>
+            
             <div id='more-content'>
                     <div id="img-div"></div>
-                    <p>I am a self-taught frontend developer, who is really enjoying building web applications full time. I have a background in finance, strategy and accounting, which i must admit is not quite related to programming. <br> About 10 years ago, while looking for a business related work positions, I decided to try out a new study platform called Coursera. I loved the idea of top world universities offering education for free. Again not everyone can afford paying Stanford admission fees. <br>I took a computer science course in Coursera, just out of curiousity. Not long after I followed up with Python and Javascript, and I was loving it! I could spend hours and hours doing a challenge, without really feeling how the time passed by. <br>Until one day - voila I found a job in my formal field of study. Getting this job was, after all, what I have been studying and working for all my life. So I stopped exploring the IT development world and instead dived into the world of maximizing revenue and profits. I am very greatfull for the opportunity and experience I gained as a business oriented professional. I gave my best both at Scandic as a Revenue Manager and at Telenor as a Senior Value Management Consultant. During these years my passion for programming didn't dissappear though. In my jobs I was always attracted on taking projects and tasks, where I could build tools and financial models which were optimizing and automating the workflow for the whole department. <br> Ten years fast forward, we arrive in 2021, where I finally took the decision to stop my career within business and finance and work full time on becoming a software developer. It is, after all, never too late to change direction and pursue a <em>Dream!</em></p>
+                    <p>I am a self-taught frontend developer, who is really enjoying building web applications full time. I have a background in finance, strategy and accounting, which i must admit is not quite related to programming. <br> About 10 years ago, while looking for a business related work positions, I decided to try out a new study platform called Coursera. I loved the idea of top world universities offering education for free. Again not everyone can afford paying Stanford admission fees. <br>I took a computer science course in Coursera, just out of curiousity. Not long after I followed up with Python and Javascript, and I was loving it! I could spend hours and hours doing a challenge, without really feeling how the time passed by. <br>Until one day - voila I found a job in my formal field of study. Getting this job was, after all, what I have been studying and working for all my life. So I stopped exploring the IT development world and instead dived into the world of maximizing revenue and profits. I am very greatfull for the opportunity and experience I gained as a business professional. I gave my best both at Scandic as a Revenue Manager and at Telenor as a Senior Consultant. During these years my passion for programming didn't dissappear though. In my jobs I would always take on projects and tasks, where I could build tools and financial models which were optimizing and automating the workflow for the whole department. <br> Ten years fast forward, we arrive in 2021, where I finally took the decision to stop my career within business and finance and work full time on becoming a software developer. It is, after all, never too late to change direction and pursue a <em>Dream!</em></p>
                     <p>I am using HTML, CSS and Vanilla JS on a daily basis and have built several web applications. Check <a class="for-link" href="#projects"><em>my projects</em></a> page.</p> 
-                    <p> <br> <a href="https://petyaferreiradeveloper.github.io/PetyaPage/" target="_blank" class="for-link">
-                        <em>Learn more about me</em></a></p>
+                    <p> <br> <a href="https://petyaferreiradeveloper.github.io/PetyaPage/" target="_blank" class="for-link"><em>Learn more about me</em></a></p>
+                    <button id="close">close</button>
             </div>
             <button id="show-more">more about me</button>
             <div class="loading-status">0%</div>
+            
             <div class="video-container">
                 <video id ="vid" playsinline autoplay loop muted poster="images/background-pic.jpeg">
                     <source src="images/portfolio-video.mp4" type="video/mp4">
@@ -61,24 +74,34 @@
                 <button class="next-btn">
                     <i class="fas fa-chevron-right fa-3x"></i>
                 </button>
-            </div>
-            <div class="overlay" id="overlay">
-                <div class="overlay-links">
+                <div class="modal-links">
                     <a id="web-page" href="https://google.com" target="_blank">Web Page</a>
                     <a id="github" href="https://github.com" target="_blank">Github Page</a>
                     <a id="detail" href="https://github.com" target="_blank">Project Details</a>
-                    <button class="close-overlay">
+                    <button class="close-modal">
                         <i class="far fa-window-close"></i>
                     </button>
                 </div>
             </div>
+            
+            
         </section>
     </main>
     <section id="contact-links">
         <div class="contact-header" id="contact-header">
             <h3>Lets work together!</h3>
             <p><em>Find more about me in the links below:</em></p>
-            <br><br><br>
+        </div>
+        <div class="contact-icons">
+            <div class="social-icon">
+                <i class="fab fa-youtube"></i>
+            </div>
+            <div class="social-icon">
+                <i class="fab fa-github-square"></i>
+            </div>
+            <div class="social-icon">
+                <i class="fab fa-linkedin"></i>
+            </div>
         </div>
     </section>
     <footer id="profile-link">

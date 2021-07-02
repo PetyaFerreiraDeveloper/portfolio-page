@@ -44,23 +44,88 @@ const projects = [
     },
 ];
 
-
-// add the overlay when the tile is clicked
-// grab the tile, the overlay and the close button
-let tileContainer = document.getElementById('tile-container');
+// ********** MOBILE NAVIGATION ********** //
+let hamburger = document.getElementById('hamburger-bars');
+let mobileNav = document.querySelector('.mobile-nav');
 let overlay = document.getElementById('overlay');
-let closeOverlay = document.querySelector('.close-overlay');
+
+hamburger.addEventListener('click', function() {
+    mobileNav.classList.add('open');
+    overlay.classList.add('open');
+});
+
+overlay.addEventListener('click', function() {
+    mobileNav.classList.remove('open');
+    overlay.classList.remove('open');
+    modal.classList.remove('open-modal');
+})
+
+mobileNav.addEventListener('click', function() {
+    mobileNav.classList.remove('open');
+    overlay.classList.remove('open');
+})
+
+// ********** OPEN AND CLOSE THE MORE ABOUT ME SECTION ********** //
+
+// lets grab the buttons and the div box, which we will be opening
+let buttonShow = document.getElementById('show-more');
+let moreContent = document.getElementById('more-content');
+let buttonClose = document.getElementById('close');
+let firstText = document.getElementById('first-text');
+let tileContainer = document.getElementById('tile-container');
+let closeModal = document.querySelector('.close-modal');
+let modal = document.querySelector('.modal-links');
+
+buttonShow.addEventListener('click', function() {
+    overlay.classList.add('open');
+    moreContent.classList.toggle('open');
+    firstText.classList.toggle('hidden');
+})
+
+buttonClose.addEventListener('click', function() {
+    moreContent.classList.toggle('open');
+    firstText.classList.toggle('hidden');
+    overlay.classList.remove('open');
+} );
+
+closeModal.addEventListener('click', function() {
+    overlay.classList.remove('open');
+    modal.classList.remove('open-modal');
+} );
 
 tileContainer.addEventListener('click', function() {
-    overlay.classList.add('open-overlay');
+    overlay.classList.add('open');
+    modal.classList.add('open-modal');
 });
 
-closeOverlay.addEventListener('click', function() {
-    overlay.classList.remove('open-overlay');
-});
+// ********** BLURRING OF BACKGROUND VIDEO ********** //
 
-// navigate between projects by clicking the arrows
-// we need to add an event listener to the project-container, 
+const loadStatus = document.querySelector('.loading-status');
+const video = document.querySelector('.video-container');
+
+let load = 0;
+let interval = setInterval(blurring, 30);
+
+function blurring() {
+    load++;
+    if (load > 99) {
+        clearInterval(interval);
+    }
+
+    loadStatus.innerText = `${load}%`;
+    loadStatus.style.opacity = scale(load, 0, 100, 1, 0);
+    video.style.filter = `blur(${scale(load, 0, 100, 30, 0)}px)`;
+
+};
+
+// https://stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers
+function scale(number, inMin, inMax, outMin, outMax) {
+    return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+};
+
+// ********** NAVIGATE THE PROJECTS ********** //
+
+// add an event listener to the project-container, 
 // when an arrow is clicked, identify which one is clicked and 
 // show the information from either the next or previous element in the projects array
 // we also change the links in the overlay with the same function
@@ -94,7 +159,6 @@ let currentItem = 0; // create a variable to follow where in the array we are(th
 // load initial item with event listener for Window load object, in stead of loading the hard coded html
 window.addEventListener('DOMContentLoaded', showProject(0));
 
-
 // lets create the event listener for the arrows click
 projectContainer.addEventListener('click', (e) => {
     let target = e.target;
@@ -113,48 +177,3 @@ projectContainer.addEventListener('click', (e) => {
     showProject(currentItem);
 })
 
-
-// ********** OPEN AND CLOSE THE MORE ABOUT ME SECTION ********** //
-
-// lets grab the button and the div box, which we will be opening
-let buttonShow = document.getElementById('show-more');
-let moreContent = document.getElementById('more-content');
-let buttonCollapse = document.getElementById('collapse');
-let firstText = document.getElementById('first-text');
-
-// when the show-more button is clicked, the div box should open, and a new
-// show-less button should be shown
-
-buttonShow.addEventListener('click', function() {
-    moreContent.classList.toggle('open');
-    buttonShow.innerHTML = 'show less';
-    firstText.classList.toggle('hidden');
-    if(!firstText.classList.contains('hidden')) {
-        buttonShow.innerHTML = 'more about me';
-    }
-})
-
-// ********** BLURRING OF BACKGROUND VIDEO ********** //
-
-const loadStatus = document.querySelector('.loading-status');
-const video = document.querySelector('.video-container');
-
-let load = 0;
-let interval = setInterval(blurring, 30);
-
-function blurring() {
-    load++;
-    if (load > 99) {
-        clearInterval(interval);
-    }
-
-    loadStatus.innerText = `${load}%`;
-    loadStatus.style.opacity = scale(load, 0, 100, 1, 0);
-    video.style.filter = `blur(${scale(load, 0, 100, 30, 0)}px)`;
-
-};
-
-// https://stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers
-function scale(number, inMin, inMax, outMin, outMax) {
-    return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
-};
