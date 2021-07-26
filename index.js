@@ -4,6 +4,16 @@
 const projects = [
     {
         id: 1,
+        title: 'Barista Coffee Cup Challenge',
+        description: 'This is a responsive website I built for a developer challenge from twentyfour.dk',
+        stack: 'stack: HTML, CSS, JS',
+        img: './images/logo.jpeg',
+        webPage: 'https://petyaferreiradeveloper.github.io/brown-rabbit-github/',
+        github: 'https://github.com/PetyaFerreiraDeveloper/brown-rabbit-github',
+        detail: 'work-in-progress.html'
+    },
+    {
+        id: 2,
         title: 'About Me',
         description: 'A page describing my professional and personal achievements in chronological order. It also contains information about my interests and the goals which drive my personal and professional development.',
         stack: 'stack: HTML, CSS',
@@ -13,7 +23,7 @@ const projects = [
         detail: 'https://petyaferreiradeveloper.github.io/PetyaPage/about-me-detail/index.html'
     },
     {
-        id: 2,
+        id: 3,
         title: 'Portfolio Page',
         description: 'This is the page which keeps track of my projects and development as a programmer.',
         stack: 'stack: HTML, CSS, JS',
@@ -21,16 +31,6 @@ const projects = [
         webPage: 'https://petyaferreiradeveloper.github.io/portfolio-page/',
         github: 'https://github.com/PetyaFerreiraDeveloper/portfolio-page.git',
         detail: './portfolio-detail/index.html'
-    },
-    {
-        id: 3,
-        title: 'Barista Coffee Cup Challenge',
-        description: '"This is a responsive website I built for a developer challenge from twentyfour.dk',
-        stack: 'stack: HTML, CSS, JS',
-        img: './images/logo.jpeg',
-        webPage: 'https://petyaferreiradeveloper.github.io/brown-rabbit-github/',
-        github: 'https://github.com/PetyaFerreiraDeveloper/brown-rabbit-github',
-        detail: 'work-in-progress.html'
     },
     {
         id: 4,
