@@ -58,6 +58,8 @@ overlay.addEventListener('click', function() {
     mobileNav.classList.remove('open');
     overlay.classList.remove('open');
     modal.classList.remove('open-modal');
+    moreContent.classList.remove('open');
+    firstText.classList.remove('hidden');
 })
 
 mobileNav.addEventListener('click', function() {
@@ -79,18 +81,19 @@ let modal = document.querySelector('.modal-links');
 buttonShow.addEventListener('click', function() {
     overlay.classList.add('open');
     moreContent.classList.toggle('open');
-    firstText.classList.toggle('hidden');
+    firstText.classList.add('hidden');
 })
 
 buttonClose.addEventListener('click', function() {
     moreContent.classList.toggle('open');
-    firstText.classList.toggle('hidden');
+    firstText.classList.remove('hidden');
     overlay.classList.remove('open');
 } );
 
 closeModal.addEventListener('click', function() {
     overlay.classList.remove('open');
     modal.classList.remove('open-modal');
+    
 } );
 
 tileContainer.addEventListener('click', function() {
